@@ -1,0 +1,5 @@
+{
+  "id": "home",
+  "name": "Home",
+  "lib": "./build/index.js"
+}
