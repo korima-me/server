@@ -28,6 +28,7 @@ class Server {
 
   private routerConfig() {
     loadApp('home');
+    this.app.get('/', (_, res) => res.redirect('/apps/home'));
   }
 
   public start = (port: number): Promise<void> => {
