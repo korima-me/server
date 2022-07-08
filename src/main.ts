@@ -1,8 +1,5 @@
-import { server } from './server';
 import path from 'path';
-import { Router } from 'express';
-import { Module, syncBuiltinESMExports } from 'node:module';
-import { loadApp } from './apps';
+import { server } from './server';
 
 const PORT = 3000;
 
@@ -11,7 +8,7 @@ globalThis.PUB_DIR = path.join(__dirname, '../public');
 server
   .start(PORT)
   .then(() => {
-    console.log(`Server Running on port ${PORT}`);
+    console.log(`Server Running on http://localhost:${PORT}`);
   })
   .catch((err) => {
     console.error(err);
